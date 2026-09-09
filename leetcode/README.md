@@ -1,37 +1,41 @@
-# Maximum Product Subarray (Medium)
+# Maximum Subarray Sum with One Deletion (Medium)
 
 ---
 
-<p>Given an integer array <code>nums</code>, find a <span data-keyword="subarray-nonempty">subarray</span> that has the largest product, and return <em>the product</em>.</p>
+<p>Given an array of integers, return the maximum sum for a <strong>non-empty</strong>&nbsp;subarray (contiguous elements) with at most one element deletion.&nbsp;In other words, you want to choose a subarray and optionally delete one element from it so that there is still at least one element left and the&nbsp;sum of the remaining elements is maximum possible.</p>
 
-<p>The test cases are generated so that the answer will fit in a <strong>32-bit</strong> integer.</p>
-
-<p><strong>Note</strong> that the product of an array with a single element is the value of that element.</p>
+<p>Note that the subarray needs to be <strong>non-empty</strong> after deleting one element.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
-<strong>Input:</strong> nums = [2,3,-2,4]
-<strong>Output:</strong> 6
-<strong>Explanation:</strong> [2,3] has the largest product 6.
-</pre>
+<strong>Input:</strong> arr = [1,-2,0,3]
+<strong>Output:</strong> 4
+<strong>Explanation: </strong>Because we can choose [1, -2, 0, 3] and drop -2, thus the subarray [1, 0, 3] becomes the maximum value.</pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
 <pre>
-<strong>Input:</strong> nums = [-2,0,-1]
-<strong>Output:</strong> 0
-<strong>Explanation:</strong> The result cannot be 2, because [-2,-1] is not a subarray.
+<strong>Input:</strong> arr = [1,-2,-2,3]
+<strong>Output:</strong> 3
+<strong>Explanation: </strong>We just choose [3] and it&#39;s the maximum sum.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> arr = [-1,-1,-1,-1]
+<strong>Output:</strong> -1
+<strong>Explanation:</strong>&nbsp;The final subarray needs to be non-empty. You can&#39;t choose [-1] and delete -1 from it, then get an empty subarray to make the sum equals to 0.
 </pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>
-	<li><code>-10 &lt;= nums[i] &lt;= 10</code></li>
-	<li>The product of any subarray of <code>nums</code> is <strong>guaranteed</strong> to fit in a <strong>32-bit</strong> integer.</li>
+	<li><code>1 &lt;= arr.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>-10<sup>4</sup> &lt;= arr[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
 
