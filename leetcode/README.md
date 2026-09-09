@@ -1,41 +1,41 @@
-# Maximum Subarray Sum with One Deletion (Medium)
+# Maximum Absolute Sum of Any Subarray (Medium)
 
 ---
 
-<p>Given an array of integers, return the maximum sum for a <strong>non-empty</strong>&nbsp;subarray (contiguous elements) with at most one element deletion.&nbsp;In other words, you want to choose a subarray and optionally delete one element from it so that there is still at least one element left and the&nbsp;sum of the remaining elements is maximum possible.</p>
+<p>You are given an integer array <code>nums</code>. The <strong>absolute sum</strong> of a subarray <code>[nums<sub>l</sub>, nums<sub>l+1</sub>, ..., nums<sub>r-1</sub>, nums<sub>r</sub>]</code> is <code>abs(nums<sub>l</sub> + nums<sub>l+1</sub> + ... + nums<sub>r-1</sub> + nums<sub>r</sub>)</code>.</p>
 
-<p>Note that the subarray needs to be <strong>non-empty</strong> after deleting one element.</p>
+<p>Return <em>the <strong>maximum</strong> absolute sum of any <strong>(possibly empty)</strong> subarray of </em><code>nums</code>.</p>
+
+<p>Note that <code>abs(x)</code> is defined as follows:</p>
+
+<ul>
+	<li>If <code>x</code> is a negative integer, then <code>abs(x) = -x</code>.</li>
+	<li>If <code>x</code> is a non-negative integer, then <code>abs(x) = x</code>.</li>
+</ul>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
-<strong>Input:</strong> arr = [1,-2,0,3]
-<strong>Output:</strong> 4
-<strong>Explanation: </strong>Because we can choose [1, -2, 0, 3] and drop -2, thus the subarray [1, 0, 3] becomes the maximum value.</pre>
+<strong>Input:</strong> nums = [1,-3,2,3,-4]
+<strong>Output:</strong> 5
+<strong>Explanation:</strong> The subarray [2,3] has absolute sum = abs(2+3) = abs(5) = 5.
+</pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
 <pre>
-<strong>Input:</strong> arr = [1,-2,-2,3]
-<strong>Output:</strong> 3
-<strong>Explanation: </strong>We just choose [3] and it&#39;s the maximum sum.
-</pre>
-
-<p><strong class="example">Example 3:</strong></p>
-
-<pre>
-<strong>Input:</strong> arr = [-1,-1,-1,-1]
-<strong>Output:</strong> -1
-<strong>Explanation:</strong>&nbsp;The final subarray needs to be non-empty. You can&#39;t choose [-1] and delete -1 from it, then get an empty subarray to make the sum equals to 0.
+<strong>Input:</strong> nums = [2,-5,1,-4,3,-2]
+<strong>Output:</strong> 8
+<strong>Explanation:</strong> The subarray [-5,1,-4] has absolute sum = abs(-5+1-4) = abs(-8) = 8.
 </pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li><code>1 &lt;= arr.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>-10<sup>4</sup> &lt;= arr[i] &lt;= 10<sup>4</sup></code></li>
+	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
 
