@@ -1,41 +1,45 @@
-# Maximum Absolute Sum of Any Subarray (Medium)
+# Maximum Sum Circular Subarray (Medium)
 
 ---
 
-<p>You are given an integer array <code>nums</code>. The <strong>absolute sum</strong> of a subarray <code>[nums<sub>l</sub>, nums<sub>l+1</sub>, ..., nums<sub>r-1</sub>, nums<sub>r</sub>]</code> is <code>abs(nums<sub>l</sub> + nums<sub>l+1</sub> + ... + nums<sub>r-1</sub> + nums<sub>r</sub>)</code>.</p>
+<p>Given a <strong>circular integer array</strong> <code>nums</code> of length <code>n</code>, return <em>the maximum possible sum of a non-empty <strong>subarray</strong> of </em><code>nums</code>.</p>
 
-<p>Return <em>the <strong>maximum</strong> absolute sum of any <strong>(possibly empty)</strong> subarray of </em><code>nums</code>.</p>
+<p>A <strong>circular array</strong> means the end of the array connects to the beginning of the array. Formally, the next element of <code>nums[i]</code> is <code>nums[(i + 1) % n]</code> and the previous element of <code>nums[i]</code> is <code>nums[(i - 1 + n) % n]</code>.</p>
 
-<p>Note that <code>abs(x)</code> is defined as follows:</p>
-
-<ul>
-	<li>If <code>x</code> is a negative integer, then <code>abs(x) = -x</code>.</li>
-	<li>If <code>x</code> is a non-negative integer, then <code>abs(x) = x</code>.</li>
-</ul>
+<p>A <strong>subarray</strong> may only include each element of the fixed buffer <code>nums</code> at most once. Formally, for a subarray <code>nums[i], nums[i + 1], ..., nums[j]</code>, there does not exist <code>i &lt;= k1</code>, <code>k2 &lt;= j</code> with <code>k1 % n == k2 % n</code>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
 <pre>
-<strong>Input:</strong> nums = [1,-3,2,3,-4]
-<strong>Output:</strong> 5
-<strong>Explanation:</strong> The subarray [2,3] has absolute sum = abs(2+3) = abs(5) = 5.
+<strong>Input:</strong> nums = [1,-2,3,-2]
+<strong>Output:</strong> 3
+<strong>Explanation:</strong> Subarray [3] has maximum sum 3.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
 <pre>
-<strong>Input:</strong> nums = [2,-5,1,-4,3,-2]
-<strong>Output:</strong> 8
-<strong>Explanation:</strong> The subarray [-5,1,-4] has absolute sum = abs(-5+1-4) = abs(-8) = 8.
+<strong>Input:</strong> nums = [5,-3,5]
+<strong>Output:</strong> 10
+<strong>Explanation:</strong> Subarray [5,5] has maximum sum 5 + 5 = 10.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [-3,-2,-3]
+<strong>Output:</strong> -2
+<strong>Explanation:</strong> Subarray [-2] has maximum sum -2.
 </pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+	<li><code>n == nums.length</code></li>
+	<li><code>1 &lt;= n &lt;= 3 * 10<sup>4</sup></code></li>
+	<li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code></li>
 </ul>
 
 
