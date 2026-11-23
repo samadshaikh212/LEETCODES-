@@ -1,44 +1,28 @@
-# First Unique Character in a String (Easy)
+# Ransom Note (Easy)
 
 ---
 
-<p>Given a string <code>s</code>, find the <strong>first</strong> non-repeating character in it and return its index. If it <strong>does not</strong> exist, return <code>-1</code>.</p>
+<p>Given two strings <code>ransomNote</code> and <code>magazine</code>, return <code>true</code><em> if </em><code>ransomNote</code><em> can be constructed by using the letters from </em><code>magazine</code><em> and </em><code>false</code><em> otherwise</em>.</p>
+
+<p>Each letter in <code>magazine</code> can only be used once in <code>ransomNote</code>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;leetcode&quot;</span></p>
-
-<p><strong>Output:</strong> <span class="example-io">0</span></p>
-
-<p><strong>Explanation:</strong></p>
-
-<p>The character <code>&#39;l&#39;</code> at index 0 is the first character that does not occur at any other index.</p>
-</div>
-
-<p><strong class="example">Example 2:</strong></p>
-
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;loveleetcode&quot;</span></p>
-
-<p><strong>Output:</strong> <span class="example-io">2</span></p>
-</div>
-
-<p><strong class="example">Example 3:</strong></p>
-
-<div class="example-block">
-<p><strong>Input:</strong> <span class="example-io">s = &quot;aabb&quot;</span></p>
-
-<p><strong>Output:</strong> <span class="example-io">-1</span></p>
-</div>
-
+<pre><strong>Input:</strong> ransomNote = "a", magazine = "b"
+<strong>Output:</strong> false
+</pre><p><strong class="example">Example 2:</strong></p>
+<pre><strong>Input:</strong> ransomNote = "aa", magazine = "ab"
+<strong>Output:</strong> false
+</pre><p><strong class="example">Example 3:</strong></p>
+<pre><strong>Input:</strong> ransomNote = "aa", magazine = "aab"
+<strong>Output:</strong> true
+</pre>
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
 
 <ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>s</code> consists of only lowercase English letters.</li>
+	<li><code>1 &lt;= ransomNote.length, magazine.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>ransomNote</code> and <code>magazine</code> consist of lowercase English letters.</li>
 </ul>
 
 
